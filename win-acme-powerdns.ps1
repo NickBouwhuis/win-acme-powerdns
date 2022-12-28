@@ -46,12 +46,10 @@ if ($Action -eq 'delete') {
            [PSCustomObject]@{
                name = $RecordName + "."
                type = "TXT"
-               ttl = $ttl
                changetype = "DELETE"
            }
        )
    } | ConvertTo-Json
-
 } 
 
 # Make the PATCH request to the PowerDNS API
